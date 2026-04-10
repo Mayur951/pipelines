@@ -6,12 +6,8 @@ on:
       - main
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  test:
+    runs-on: self-hosted
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Run Script
-        run: echo "Pipeline is working!"
+      - run: echo "Running on EC2"
